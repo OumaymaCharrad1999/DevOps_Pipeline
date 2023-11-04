@@ -1,0 +1,7 @@
+owner:
+  - id: 1
+    name: "Owner 1"
+    age: 15
+  - id: 2
+    name: "Owner 2"
+    age: 19

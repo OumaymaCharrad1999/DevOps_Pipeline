@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+  jenkins-container:
+    image: jenkins/jenkins
+    container_name: "jenkins-container"
+    ports:
+      - "8080:8080"
+    networks:
+      - devnet
+    volumes:
+      - "jenkins_home:/var/jenkins_home"
+
+  sonarqube-container:
+    image: sonarqube
+    container_name: "sonarqube-container"
+    restart: always
+    ports:
+      - "9000:9000"
+    networks:
+      - devnet
+    volumes:
+      - "/opt/sonar/:/var/lib/sonar"
+    environment:
+      - SONARQUBE_JDBC_URL=jdbc:mysql://mysqldb-container:3306/pet_store
+      - SONARQUBE_JDBC_USERNAME=sonar
+      - SONARQUBE_JDBC_PASSWORD=sonar
+
+  nexus-container:
+    image: sonatype/nexus3
+    container_name: "nexus-container"
+    ports:
+      - "8081:8081"
+    networks:
+      - devnet
+    volumes:
+      - "nexus_data:/nexus-data"
+
+networks:
+  devnet:
+    driver: bridge
+
+volumes:
+  jenkins_home:
+  nexus_data:
