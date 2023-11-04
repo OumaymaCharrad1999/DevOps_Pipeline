@@ -1,4 +1,4 @@
 def pushToNexus() {
-    echo "Pushing the jar file to Nexus..."
+    echo "Pushing the JAR file to Nexus..."
     sh 'mvn clean deploy -DskipTests'
 }
