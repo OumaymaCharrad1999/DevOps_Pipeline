@@ -14,9 +14,13 @@
     <name>devops-pipeline</name>
     <description>devops-pipeline</description>
     <properties>
+        <baseNexusURL>${baseNexusURL}</baseNexusURL>
+        <targetRepositoryID>${targetRepositoryID}</targetRepositoryID>
+        <package.final.name>${project.artifactId}</package.final.name>
         <java.version>11</java.version>
         <sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -109,10 +113,26 @@
                 <executions>
                     <execution>
                         <id>default-deploy</id>
+                        <configuration>
+                            <skip>true</skip>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>deploy-node-modules-artifact</id>
                         <phase>deploy</phase>
                         <goals>
-                            <goal>deploy</goal>
+                            <goal>deploy-file</goal>
                         </goals>
+                        <configuration>
+                            <file>${file}</file>
+                            <groupId>${groupId}</groupId>
+                            <artifactId>${artifactId}</artifactId>
+                            <version>${version}</version>
+                            <packaging>${packaging}</packaging>
+                            <generatePom>true</generatePom>
+                            <repositoryId>${targetRepositoryID}</repositoryId>
+                            <url>${baseNexusURL}/repository/maven-snapshots/${targetRepositoryID}</url>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
