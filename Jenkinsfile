@@ -5,7 +5,7 @@ def gv
 pipeline {
     agent any
     environment {
-        IMAGE_VERSION="1.0.0"
+        IMAGE_VERSION="latest"
     }
     tools {
         maven "Maven-3.9.5"
@@ -20,21 +20,23 @@ pipeline {
             }
         }
 
-        stage("Increment version") {
+        stage("Test") {
             steps {
                 script {
-                    echo "Incrementing app version..."
-                    sh "mvn build-helper:parse-version versions:set \
-                        -DnewVersion=\\\${parsedVersion.majorVersion}.\\\${parsedVersion.minorVersion}.\\\${parsedVersion.nextIncrementalVersion} \
-                        versions:commit"
-                    def matcher = readFile("pom.xml") =~ "<version>(.+)</version>"
-                    def version = matcher[0][1]
-                    env.IMAGE_VERSION = "$version-$BUILD_NUMBER"
+                    gv.test()
                 }
             }
         }
 
-        stage("Build Docker Image") {
+        stage("Build JAR") {
+            steps {
+                script {
+                    gv.buildJar()
+                }
+            }
+        }
+
+        stage("Build & Push Docker Image to Docker Hub") {
             steps {
                 script {
                     gv.buildImage()
