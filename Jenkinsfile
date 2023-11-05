@@ -20,14 +20,6 @@ pipeline {
             }
         }
 
-        stage("Test") {
-            steps {
-                script {
-                    gv.test()
-                }
-            }
-        }
-
         stage("Build JAR") {
             steps {
                 script {
@@ -36,6 +28,14 @@ pipeline {
             }
         }
 
+        stage("Test") {
+            steps {
+                script {
+                    gv.test()
+                }
+            }
+        }
+        
         stage("Build & Push Docker Image to Docker Hub") {
             steps {
                 script {
