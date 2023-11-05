@@ -5,7 +5,7 @@ def test() {
 
 def buildJar() {
     echo "Building the JAR file..."
-    sh "mvn clean package"
+    sh "mvn clean package -DskipTests"
 }
 
 def pushToNexus() {
