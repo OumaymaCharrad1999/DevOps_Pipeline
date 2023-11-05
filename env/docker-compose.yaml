@@ -2,7 +2,10 @@ version: '3'
 
 services:
   jenkins-container:
-    image: jenkins/jenkins
+    build:
+      context: ~/Documents/DevOps/Spring-Boot-MySQL-DevOps-Pipeline/env/
+      dockerfile: Dockerfile
+    image: jenkins
     container_name: "jenkins-container"
     ports:
       - "8080:8080"
