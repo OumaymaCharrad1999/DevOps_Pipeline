@@ -17,9 +17,18 @@ def buildJar() {
 
 def publishToNexus(String serverIp) {
     echo "Pushing the JAR file to Nexus..."
-    nexusArtifactUploader artifacts: [[artifactId: '${POM_ARTIFACTID}', classifier: '', file: 'target/${POM_ARTIFACTID}-${POM_VERSION}.${POM_PACKAGING}', type: '${POM_PACKAGING}']],
-            credentialsId: 'Nexus-Credentials', groupId: '${POM_GROUPID}', nexusUrl: '${serverIp}', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-snapshots',
-            version: '${POM_VERSION}'
+    def pom = readMavenPom file: 'pom.xml'
+    nexusArtifactUploader artifacts: [[artifactId: '${pom.artifactId}',
+                                       classifier: '',
+                                       file: 'target/${pom.artifactId}-${pom.version}.${pom.packaging}',
+                                       type: '${pom.packaging}']],
+            credentialsId: 'Nexus-Credentials',
+            groupId: '${pom.groupId}',
+            nexusUrl: '${serverIp}',
+            nexusVersion: 'nexus3',
+            protocol: 'http',
+            repository: 'maven-snapshots',
+            version: '${pom.version}'
     // sh "mvn clean deploy -DskipTests"
 }
 
