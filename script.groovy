@@ -3,14 +3,24 @@ def test() {
     sh "mvn test"
 }
 
+def sonarScan(String serverIp, String serverUser) {
+    echo "Running SonarQube Scanner..."
+    def runSonar = '"export MYSQLDB_ROOT_PASSWORD=oumayma MYSQLDB_DATABASE=pet_store MYSQLDB_LOCAL_PORT=3306 MYSQLDB_DOCKER_PORT=3306 && bash runSonarQube.sh"'
+    sshagent (credentials: ['sonar-server']) {
+        sh "ssh -o StrictHostKeyChecking=no ${serverUser}@${serverIp} ${runSonar}"
+    }}
+
 def buildJar() {
     echo "Building the JAR file..."
     sh "mvn clean package -DskipTests"
 }
 
-def publishToNexus() {
+def publishToNexus(String serverIp) {
     echo "Pushing the JAR file to Nexus..."
-    sh "mvn clean deploy -DskipTests"
+    nexusArtifactUploader artifacts: [[artifactId: '${POM_ARTIFACTID}', classifier: '', file: 'target/${POM_ARTIFACTID}-${POM_VERSION}.${POM_PACKAGING}', type: '${POM_PACKAGING}']],
+            credentialsId: 'Nexus-Credentials', groupId: '${POM_GROUPID}', nexusUrl: '${serverIp}', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-snapshots',
+            version: '${POM_VERSION}'
+    // sh "mvn clean deploy -DskipTests"
 }
 
 def buildImage() {

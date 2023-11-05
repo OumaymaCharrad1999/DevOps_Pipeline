@@ -5,6 +5,9 @@ def gv
 pipeline {
     agent any
     environment {
+        SONARQUBE_SERVER_IP ="192.168.1.19:9000"
+        SONARQUBE_SERVER_USER="admin"
+        NEXUS_SERVER_IP ="192.168.1.19:8081"
         IMAGE_VERSION="latest"
     }
     tools {
@@ -24,6 +27,14 @@ pipeline {
             steps {
                 script {
                     gv.buildJar()
+                }
+            }
+        }
+
+        stage("Publish JAR file to Nexus") {
+            steps {
+                script {
+                    gv.publishToNexus("${NEXUS_SERVER_IP}")
                 }
             }
         }
