@@ -13,6 +13,9 @@ services:
       - devnet
     volumes:
       - "jenkins_home:/var/jenkins_home"
+      - "jenkins_docker_certs:/certs/client:ro"
+      - "~/Documents/DevOps/Spring-Boot-MySQL-DevOps-Pipeline/env/Dockerfile:/Dockerfile"
+      - "/var/run/docker.sock:/var/run/docker.sock"
 
   sonarqube-container:
     image: sonarqube
@@ -45,4 +48,5 @@ networks:
 
 volumes:
   jenkins_home:
+  jenkins_docker_certs:
   nexus_data:
