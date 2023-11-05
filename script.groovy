@@ -8,7 +8,7 @@ def buildJar() {
     sh "mvn clean package -DskipTests"
 }
 
-def pushToNexus() {
+def publishToNexus() {
     echo "Pushing the JAR file to Nexus..."
     sh "mvn clean deploy -DskipTests"
 }
