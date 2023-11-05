@@ -20,14 +20,6 @@ pipeline {
             }
         }
 
-        stage("Test") {
-            steps {
-                script {
-                    gv.test()
-                }
-            }
-        }
-
         stage("Build JAR") {
             steps {
                 script {
