@@ -28,14 +28,6 @@ pipeline {
             }
         }
 
-        stage("Publish JAR File to Nexus") {
-            steps {
-                script {
-                    gv.publishToNexus()
-                }
-            }
-        }
-
         stage("Build & Push Docker Image to Docker Hub") {
             steps {
                 script {
