@@ -5,7 +5,7 @@ def pushToNexus() {
 
 def buildImage() {
     echo "Building the Docker Image..."
-    withCredentials([usernamePassword(credentialsId: 'docker-hub-repo', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
+    withCredentials([usernamePassword(credentialsId: "Docker_Hub", passwordVariable: "PASS", usernameVariable: "USER")]) {
         sh "docker build -t oumaymacharrad/my-repo:pet-store-app-${IMAGE_VERSION} ."
         sh "echo $PASS | docker login -u $USER --password-stdin"
         sh "docker push oumaymacharrad/my-repo:pet-store-app-${IMAGE_VERSION}"
