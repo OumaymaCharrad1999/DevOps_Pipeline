@@ -34,14 +34,6 @@ pipeline {
             }
         }
 
-        stage("Push JAR to Nexus") {
-            steps {
-                script {
-                    gv.pushToNexus()
-                }
-            }
-        }
-
         stage("Build Docker Image") {
             steps {
                 script {
