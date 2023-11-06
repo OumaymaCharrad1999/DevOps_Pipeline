@@ -6,7 +6,7 @@ def test() {
 def sonarScan(String serverIp, String serverUser) {
     echo "Running SonarQube Scanner..."
     def runSonar = '"export MYSQLDB_ROOT_PASSWORD=oumayma MYSQLDB_DATABASE=pet_store MYSQLDB_LOCAL_PORT=3306 MYSQLDB_DOCKER_PORT=3306 && bash runSonarQube.sh"'
-    sshagent (credentials: ['sonar-server']) {
+    sshagent (credentials: ['SonarQube-Credentials']) {
         sh "ssh -o StrictHostKeyChecking=no ${serverUser}@${serverIp} ${runSonar}"
     }}
 

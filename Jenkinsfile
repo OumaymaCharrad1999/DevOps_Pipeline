@@ -5,6 +5,8 @@ def gv
 pipeline {
     agent any
     environment {
+        SONARQUBE_IP ="192.168.1.19"
+        SONARQUBE_USER="admin"
         IMAGE_VERSION="latest"
     }
     tools {
@@ -28,6 +30,14 @@ pipeline {
             }
         }
 
+        stage("SonarQube Testing and Scan") {
+            steps {
+                script {
+                    gv.sonarScan("${SONARQUBE_IP}","${SONARQUBE_USER}")
+                }
+            }
+        }
+
         stage("Test") {
             steps {
                 script {
@@ -35,7 +45,7 @@ pipeline {
                 }
             }
         }
-        
+
         stage("Build & Push Docker Image to Docker Hub") {
             steps {
                 script {
