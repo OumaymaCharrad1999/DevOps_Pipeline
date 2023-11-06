@@ -3,7 +3,7 @@ def test() {
     sh "mvn test"
 }
 
-def sonarScan(String serverIp, String serverUser) {
+def sonarScan() {
     echo "Running SonarQube Scanner..."
     /*def runSonar = '"export MYSQLDB_ROOT_PASSWORD=oumayma MYSQLDB_DATABASE=pet_store MYSQLDB_LOCAL_PORT=3306 MYSQLDB_DOCKER_PORT=3306 && bash runSonarQube.sh"'
     sshagent (credentials: ['Sonar-Credentials']) {
