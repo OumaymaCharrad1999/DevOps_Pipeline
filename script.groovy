@@ -22,7 +22,7 @@ def publishToNexus(String serverIp) {
 
 def buildImage() {
     echo "Building the Docker Image..."
-    withCredentials([usernamePassword(credentialsId: "Docker_Hub_Credentials", usernameVariable: "USER")]) {
+    withCredentials([usernamePassword(credentialsId: "Docker_Hub_Credentials", passwordVariable: "PASS", usernameVariable: "USER")]) {
         sh "docker build -t oumaymacharrad/my-repo:pet-store-app-${IMAGE_VERSION} ."
         echo "Pushing the Docker Image to Docker Hub..."
         sh "docker login -u $USER"
