@@ -1,5 +1,10 @@
+def buildJar() {
+    echo "Building the JAR file..."
+    sh "mvn clean package -DskipTests"
+}
+
 def test() {
-    echo "Run JUnit Tests..."
+    echo "Running JUnit Tests..."
     sh "mvn test"
 }
 
@@ -8,11 +13,6 @@ def sonarScan() {
     withSonarQubeEnv() {
         sh "mvn clean verify sonar:sonar -Dsonar.projectKey=pet_store_pipeline -Dsonar.projectName='pet_store_pipeline' -DskipTests"
     }
-}
-
-def buildJar() {
-    echo "Building the JAR file..."
-    sh "mvn clean package -DskipTests"
 }
 
 def publishToNexus(String serverIp) {
