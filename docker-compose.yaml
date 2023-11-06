@@ -15,7 +15,7 @@ services:
 
   pet-store-app-container:
     build:
-      context: ~/Documents/DevOps/DevOps_TP_2_Pipeline/env/
+      context: ~/Documents/DevOps/DevOps_TP_2_Pipeline/
       dockerfile: Dockerfile
     image: pet-store-app:latest
     container_name: "pet-store-app-container"
