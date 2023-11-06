@@ -10,7 +10,9 @@ def test() {
 
 def sonarScan() {
     echo "Running SonarQube Scanner..."
-    sh "mvn clean verify sonar:sonar -Dsonar.projectKey=pet_store_pipeline -Dsonar.projectName='pet_store_pipeline' -DskipTests"
+    withSonarQubeEnv() {
+        sh "mvn clean verify sonar:sonar -Dsonar.projectKey=pet_store_pipeline -Dsonar.projectName='pet_store_pipeline' -DskipTests"
+    }
 }
 
 def publishToNexus(String serverIp) {
