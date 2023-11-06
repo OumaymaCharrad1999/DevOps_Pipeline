@@ -1,6 +1,6 @@
 def buildJar() {
     echo "Building the JAR file..."
-    sh "mvn clean package -DskipTests"
+    sh "mvn clean package"
 }
 
 def test() {
