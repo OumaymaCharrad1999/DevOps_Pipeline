@@ -11,7 +11,7 @@ services:
     ports:
       - ${MYSQLDB_LOCAL_PORT}:${MYSQLDB_DOCKER_PORT}
     networks:
-      - pet-store-net
+      - env_devnet
     volumes:
       - /var/lib/docker/volumes/springboot-mysql-devops-pipeline-volume/_data:/var/lib/mysql
 
@@ -27,7 +27,7 @@ services:
     ports:
       - ${SPRING_LOCAL_PORT}:${SPRING_DOCKER_PORT}
     networks:
-      - pet-store-net
+      - env_devnet
     environment:
       - DATABASE_HOST=mysqldb-container
       - DATABASE_USER=${MYSQLDB_USER}
@@ -36,5 +36,5 @@ services:
       - DATABASE_PORT=${MYSQLDB_DOCKER_PORT}
 
 networks:
-  pet-store-net:
+  env_devnet:
     external: true
