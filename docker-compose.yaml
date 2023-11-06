@@ -30,3 +30,8 @@ services:
       - DATABASE_PASSWORD=${MYSQLDB_ROOT_PASSWORD}
       - DATABASE_NAME=${MYSQLDB_DATABASE}
       - DATABASE_PORT=${MYSQLDB_DOCKER_PORT}
+
+networks:
+  default:
+    external:
+      name: pet-store-network
