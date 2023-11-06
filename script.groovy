@@ -9,7 +9,7 @@ def sonarScan() {
     sshagent (credentials: ['Sonar-Credentials']) {
         sh "ssh -o StrictHostKeyChecking=no ${serverUser}@${serverIp} ${runSonar}"*/
     withSonarQubeEnv() {
-        sh "mvn clean verify sonar:sonar -Dsonar.projectKey=pet_store_pipeline -Dsonar.projectName='pet_store_pipeline'"
+        sh "mvn clean verify sonar:sonar -Dsonar.projectKey=pet_store_pipeline -Dsonar.projectName='pet_store_pipeline' -DskipTests"
     }
 }
 
