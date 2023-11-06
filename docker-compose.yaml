@@ -10,8 +10,6 @@ services:
       - MYSQL_DATABASE=${MYSQLDB_DATABASE}
     ports:
       - ${MYSQLDB_LOCAL_PORT}:${MYSQLDB_DOCKER_PORT}
-    networks:
-      - env_devnet
     volumes:
       - /var/lib/docker/volumes/springboot-mysql-devops-pipeline-volume/_data:/var/lib/mysql
 
@@ -26,15 +24,9 @@ services:
       - mysqldb-container
     ports:
       - ${SPRING_LOCAL_PORT}:${SPRING_DOCKER_PORT}
-    networks:
-      - env_devnet
     environment:
       - DATABASE_HOST=mysqldb-container
       - DATABASE_USER=${MYSQLDB_USER}
       - DATABASE_PASSWORD=${MYSQLDB_ROOT_PASSWORD}
       - DATABASE_NAME=${MYSQLDB_DATABASE}
       - DATABASE_PORT=${MYSQLDB_DOCKER_PORT}
-
-networks:
-  env_devnet:
-    external: true
