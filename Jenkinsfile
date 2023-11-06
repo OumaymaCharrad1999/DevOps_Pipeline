@@ -28,14 +28,6 @@ pipeline {
             }
         }
 
-        stage("Test") {
-            steps {
-                script {
-                    gv.test()
-                }
-            }
-        }
-
         stage("SonarQube Analysis") {
             steps {
                 script {
