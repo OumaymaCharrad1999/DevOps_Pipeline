@@ -3,7 +3,7 @@ version: '3'
 services:
   jenkins-container:
     build:
-      context: ~/Documents/DevOps/Spring-Boot-MySQL-DevOps-Pipeline/env/
+      context: ~/Documents/DevOps/DevOps_TP_2_Pipeline/env/
       dockerfile: Dockerfile
     image: jenkins
     container_name: "jenkins-container"
@@ -14,7 +14,7 @@ services:
     volumes:
       - "jenkins_home:/var/jenkins_home"
       - "jenkins_docker_certs:/certs/client:ro"
-      - "~/Documents/DevOps/Spring-Boot-MySQL-DevOps-Pipeline/env/Dockerfile:/Dockerfile"
+      - "~/Documents/DevOps/DevOps_TP_2_Pipeline/env/Dockerfile:/Dockerfile"
       - "/var/run/docker.sock:/var/run/docker.sock"
 
   sonarqube-container:
