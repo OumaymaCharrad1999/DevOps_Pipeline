@@ -30,10 +30,10 @@ pipeline {
             }
         }
 
-        stage("SonarQube Testing and Scan") {
+        stage("SonarQube Analysis") {
             steps {
                 script {
-                    gv.sonarScan("${SONARQUBE_IP}","${SONARQUBE_USER}")
+                    gv.sonarScan()
                 }
             }
         }
