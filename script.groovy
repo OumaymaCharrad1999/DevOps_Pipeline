@@ -5,9 +5,6 @@ def test() {
 
 def sonarScan() {
     echo "Running SonarQube Scanner..."
-    /*def runSonar = '"export MYSQLDB_ROOT_PASSWORD=oumayma MYSQLDB_DATABASE=pet_store MYSQLDB_LOCAL_PORT=3306 MYSQLDB_DOCKER_PORT=3306 && bash runSonarQube.sh"'
-    sshagent (credentials: ['Sonar-Credentials']) {
-        sh "ssh -o StrictHostKeyChecking=no ${serverUser}@${serverIp} ${runSonar}"*/
     withSonarQubeEnv() {
         sh "mvn clean verify sonar:sonar -Dsonar.projectKey=pet_store_pipeline -Dsonar.projectName='pet_store_pipeline' -DskipTests"
     }

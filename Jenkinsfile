@@ -5,8 +5,6 @@ def gv
 pipeline {
     agent any
     environment {
-        SONARQUBE_IP ="192.168.1.19"
-        SONARQUBE_USER="admin"
         IMAGE_VERSION="latest"
     }
     tools {
@@ -30,18 +28,18 @@ pipeline {
             }
         }
 
-        stage("SonarQube Analysis") {
-            steps {
-                script {
-                    gv.sonarScan()
-                }
-            }
-        }
-
         stage("Test") {
             steps {
                 script {
                     gv.test()
+                }
+            }
+        }
+
+        stage("SonarQube Analysis") {
+            steps {
+                script {
+                    gv.sonarScan()
                 }
             }
         }
