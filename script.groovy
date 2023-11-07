@@ -15,7 +15,7 @@ def sonarScan() {
     }
 }
 
-def publishToNexus() {
+def publishToNexus(String serverIp) {
     echo "Pushing the JAR file to Nexus..."
     sh "mvn clean deploy -DskipTests"
 }
