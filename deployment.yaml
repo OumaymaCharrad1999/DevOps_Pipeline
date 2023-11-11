@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: webapp
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      imagePullSecrets:
+        - name: myregistrykey
+      containers:
+        - name: webapp-container
+          image: oumaymacharrad/my-repo:pet-store-app-latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
