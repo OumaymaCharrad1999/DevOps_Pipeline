@@ -7,6 +7,8 @@ services:
       dockerfile: Dockerfile
     image: jenkins
     container_name: "jenkins-container"
+    networks:
+      - pet-store-network
     ports:
       - "8080:8080"
     volumes:
@@ -18,6 +20,8 @@ services:
   sonarqube-container:
     image: sonarqube
     container_name: "sonarqube-container"
+    networks:
+      - pet-store-network
     restart: always
     ports:
       - "9000:9000"
@@ -31,6 +35,8 @@ services:
   nexus-container:
     image: sonatype/nexus3
     container_name: "nexus-container"
+    networks:
+      - pet-store-network
     ports:
       - "8081:8081"
     volumes:
@@ -39,6 +45,8 @@ services:
   mysqldb-container:
     image: mysql
     container_name: "mysqldb-container"
+    networks:
+      - pet-store-network
     environment:
       - MYSQL_USER=${MYSQLDB_USER}
       - MYSQL_ROOT_PASSWORD=${MYSQLDB_ROOT_PASSWORD}
