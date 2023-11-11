@@ -25,12 +25,11 @@ services:
     ports:
       - ${SPRING_LOCAL_PORT}:${SPRING_DOCKER_PORT}
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb-container:${MYSQLDB_DOCKER_PORT}/${MYSQLDB_DATABASE}?autoReconnect=true&useSSL=false
-      #- DATABASE_HOST=mysqldb-container
-      #- DATABASE_USER=${MYSQLDB_USER}
-      #- DATABASE_PASSWORD=${MYSQLDB_ROOT_PASSWORD}
-      #- DATABASE_NAME=${MYSQLDB_DATABASE}
-      #- DATABASE_PORT=${MYSQLDB_DOCKER_PORT}
+      - DATABASE_HOST=mysqldb-container
+      - DATABASE_USER=${MYSQLDB_USER}
+      - DATABASE_PASSWORD=${MYSQLDB_ROOT_PASSWORD}
+      - DATABASE_NAME=${MYSQLDB_DATABASE}
+      - DATABASE_PORT=${MYSQLDB_DOCKER_PORT}
 
 networks:
   default:
