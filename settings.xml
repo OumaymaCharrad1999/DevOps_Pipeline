@@ -13,8 +13,8 @@
 
     <mirrors>
         <mirror>
-            <id>snapshots</id>
-            <name>snapshots</name>
+            <id>central</id>
+            <name>central</name>
             <url>http://192.168.1.19:8081/repository/maven-snapshots/</url>
             <mirrorOf>*</mirrorOf>
         </mirror>
