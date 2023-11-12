@@ -28,7 +28,7 @@ pipeline {
             }
         }
 
-        stage("Test") {
+        stage("Unit Tests") {
             steps {
                 script {
                     gv.test()
@@ -40,6 +40,14 @@ pipeline {
             steps {
                 script {
                     gv.sonarScan()
+                }
+            }
+        }
+
+        stage("Publish JAR file to Nexus") {
+            steps {
+                script {
+                    gv.publishToNexus()
                 }
             }
         }
