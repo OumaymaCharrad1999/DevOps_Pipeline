@@ -24,7 +24,7 @@ services:
     volumes:
       - "/opt/sonar/:/var/lib/sonar"
     environment:
-      - SONARQUBE_JDBC_URL=jdbc:mysql://mysqldb-container:${MYSQLDB_DOCKER_PORT}/${MYSQLDB_DATABASE}
+      - SONARQUBE_JDBC_URL=jdbc:mysql://mysqldb-container:3306/pet_store
       - SONARQUBE_JDBC_USERNAME=sonar
       - SONARQUBE_JDBC_PASSWORD=sonar
 
@@ -35,18 +35,6 @@ services:
       - "8081:8081"
     volumes:
       - "nexus_data:/nexus-data"
-
-  mysqldb-container:
-    image: mysql
-    container_name: "mysqldb-container"
-    environment:
-      - MYSQL_USER=${MYSQLDB_USER}
-      - MYSQL_ROOT_PASSWORD=${MYSQLDB_ROOT_PASSWORD}
-      - MYSQL_DATABASE=${MYSQLDB_DATABASE}
-    ports:
-      - ${MYSQLDB_LOCAL_PORT}:${MYSQLDB_DOCKER_PORT}
-    volumes:
-      - /var/lib/docker/volumes/springboot-mysql-devops-pipeline-volume/_data:/var/lib/mysql
 
 networks:
   default:

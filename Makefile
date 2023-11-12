@@ -1,4 +1,5 @@
-export MYSQLDB_USER := root
+export MYSQLDB_USER := oumayma
+export MYSQLDB_PASSWORD := oumayma
 export MYSQLDB_ROOT_PASSWORD := oumayma
 export MYSQLDB_DATABASE := pet_store
 export MYSQLDB_LOCAL_PORT := 3306

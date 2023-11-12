@@ -11,13 +11,13 @@ def test() {
 def sonarScan() {
     echo "Running SonarQube Scanner..."
     withSonarQubeEnv() {
-        sh "mvn clean verify sonar:sonar -Dsonar.projectKey=pet_store_pipeline -Dsonar.projectName='pet_store_pipeline' -DskipTests"
+        sh "mvn clean verify sonar:sonar -Dsonar.projectKey=pet_store_pipeline -Dsonar.projectName='pet_store_pipeline'"
     }
 }
 
 def publishToNexus(String serverIp) {
     echo "Pushing the JAR file to Nexus..."
-    sh "mvn clean deploy -DskipTests"
+    sh "mvn clean deploy"
 }
 
 def buildImage() {
