@@ -5,7 +5,7 @@
 
     <servers>
         <server>
-            <id>Nexus-Credentials</id>
+            <id>nexus-snapshots</id>
             <username>admin</username>
             <password>1329566</password>
         </server>
