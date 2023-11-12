@@ -17,7 +17,7 @@ def sonarScan() {
 
 def publishToNexus() {
     echo "Pushing the JAR file to Nexus..."
-    sh "mvn clean deploy -DskipTests -DrepositoryId=nexus-snapshots"
+    sh "mvn clean deploy -DskipTests"
 }
 
 def buildImage() {
