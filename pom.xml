@@ -165,10 +165,10 @@
     </build>
 
     <distributionManagement>
-        <snapshotRepository>
+        <repository>
             <id>nexus-snapshots</id>
             <uniqueVersion>false</uniqueVersion>
             <url>http://192.168.1.19:8081/repository/maven-snapshots/</url>
-        </snapshotRepository>
+        </repository>
     </distributionManagement>
 </project>
