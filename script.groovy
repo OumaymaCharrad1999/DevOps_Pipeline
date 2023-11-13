@@ -29,7 +29,7 @@ def deploy() {
     echo "Deploying the application using Kubernetes..."
     withCredentials([file(credentialsId: 'Kubernetes-Credentials', variable: 'KUBECONFIG_CREDENTIAL')]) {
         withEnv(['KUBECONFIG=$KUBECONFIG_CREDENTIAL']) {
-            sh "kubectl apply -f deployment.yaml --context minikube"
+            sh "kubectl apply -f deployment.yaml"
             sh "kubectl get nodes"
             sh "kubectl get deployments"
             sh "kubectl get pods"
