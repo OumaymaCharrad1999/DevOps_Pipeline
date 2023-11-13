@@ -23,11 +23,20 @@ def publishToNexus() {
 def buildImage() {
     echo "Building the Docker Image..."
     withCredentials([usernamePassword(credentialsId: "Docker_Hub_Credentials", passwordVariable: "PASS", usernameVariable: "USER")]) {
-        sh "docker build -t oumaymacharrad/my-repo:pet-store-app-${IMAGE_VERSION} ."
+        sh "docker build -t oumaymacharrad/pet-store-app:${IMAGE_VERSION} ."
         echo "Pushing the Docker Image to Docker Hub..."
         sh "echo $PASS | docker login -u $USER --password-stdin"
-        sh "docker push oumaymacharrad/my-repo:pet-store-app-${IMAGE_VERSION}"
+        sh "docker push oumaymacharrad/pet-store-app:${IMAGE_VERSION}"
     }
+}
+
+def deploy() {
+    echo "Deploying the application using Kubernetes..."
+    sh "kubectl apply -f deployment.yaml"
+    sh "kubectl get nodes"
+    sh "kubectl get deployments"
+    sh "kubectl get pods"
+    sh "kubectl get services"
 }
 
 return this

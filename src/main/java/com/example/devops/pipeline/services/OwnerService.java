@@ -36,4 +36,11 @@ public class OwnerService {
         }
     }
 
+    public void deleteOwner(Long ownerId) throws ResourceNotFoundException {
+        if (!ownerRepository.existsById(ownerId)) {
+            throw new ResourceNotFoundException("Owner not found with ID: " + ownerId);
+        }
+        ownerRepository.deleteById(ownerId);
+    }
+
 }

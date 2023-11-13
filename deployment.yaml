@@ -1,22 +1,111 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webapp-deployment
+  name: mysqldb-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: webapp
+      app: mysqldb
   template:
     metadata:
       labels:
-        app: webapp
+        app: mysqldb
     spec:
       imagePullSecrets:
         - name: myregistrykey
       containers:
-        - name: webapp-container
-          image: oumaymacharrad/my-repo:pet-store-app-latest
-          imagePullPolicy: IfNotPresent
+        - name: mysqldb-container
+          image: mysql
+          env:
+            - name: MYSQL_USER
+              value: "oumayma"
+            - name: MYSQL_PASSWORD
+              value: "oumayma"
+            - name: MYSQL_ROOT_PASSWORD
+              value: "oumayma"
+            - name: MYSQL_DATABASE
+              value: "pet_store"
           ports:
-            - containerPort: 80
+            - containerPort: 3306
+          volumeMounts:
+            - name: mysql-storage
+              mountPath: /var/lib/mysql
+      volumes:
+        - name: mysql-storage
+          emptyDir: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysqldb-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: mysqldb
+  ports:
+    - protocol: TCP
+      port: 3306
+      targetPort: 3306
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pet-store-app-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pet-store-app
+  template:
+    metadata:
+      labels:
+        app: pet-store-app
+    spec:
+      containers:
+        - name: pet-store-app-container
+          image: oumaymacharrad/pet-store-app:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: DATABASE_HOST
+              value: "mysqldb-service"
+            - name: DATABASE_USER
+              value: "oumayma"
+            - name: DATABASE_PASSWORD
+              value: "oumayma"
+            - name: DATABASE_ROOT_PASSWORD
+              value: "oumayma"
+            - name: DATABASE_NAME
+              value: "pet_store"
+            - name: DATABASE_PORT
+              value: "3306"
+          ports:
+            - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pet-store-app-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: pet-store-app
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-pv-claim
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
