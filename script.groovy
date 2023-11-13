@@ -15,11 +15,6 @@ def sonarScan() {
     }
 }
 
-def publishToNexus() {
-    echo "Pushing the JAR file to Nexus..."
-    sh "mvn clean deploy -DskipTests"
-}
-
 def buildImage() {
     echo "Building the Docker Image..."
     withCredentials([usernamePassword(credentialsId: "Docker_Hub_Credentials", passwordVariable: "PASS", usernameVariable: "USER")]) {
@@ -32,7 +27,7 @@ def buildImage() {
 
 def deploy() {
     echo "Deploying the application using Kubernetes..."
-    sh "kubectl apply -f deployment.yaml"
+    sh "kubectl apply -f deployment.yaml --context minikube"
     sh "kubectl get nodes"
     sh "kubectl get deployments"
     sh "kubectl get pods"

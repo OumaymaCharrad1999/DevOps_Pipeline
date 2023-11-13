@@ -5,8 +5,8 @@ services:
     build:
       context: ~/Documents/DevOps/DevOps_TP_2_Pipeline/env/
       dockerfile: Dockerfile
-    image: jenkins
-    container_name: "jenkins-container"
+    image: jenkins-kubectl
+    container_name: "jenkins-container-latest"
     ports:
       - "8080:8080"
     volumes:
