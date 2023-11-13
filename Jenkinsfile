@@ -51,13 +51,6 @@ pipeline {
                 }
             }
         }
-
-        stage("Publish JAR file to Nexus") {
-            steps {
-                script {
-                    gv.publishToNexus()
-                }
-            }
-        }
     }
+
 }
