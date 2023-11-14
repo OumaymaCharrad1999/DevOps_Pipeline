@@ -52,6 +52,14 @@ pipeline {
             }
         }*/
 
+        stage('Setup Deployment') {
+            steps {
+                script {
+                    gv.setupDeployment()
+                }
+            }
+        }
+
         stage("Deploying using Kubernetes") {
             steps {
                 script {

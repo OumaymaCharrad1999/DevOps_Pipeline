@@ -25,17 +25,23 @@ def buildImage() {
     }
 }
 
+def setupDeployment() {
+    env.KUBECONFIG = '/home/Oumayma/.kube/config'
+    def minikubeServer = 'Oumayma@192.168.49.2'
+    sh "sshpass -p 1329566 ssh -o StrictHostKeyChecking=no ${minikubeServer} 'cat /home/Oumayma/.minikube/ca.crt' > ca.crt"
+    sh "sshpass -p 1329566 ssh -o StrictHostKeyChecking=no ${minikubeServer} 'cat /home/Oumayma/.minikube/profiles/minikube/client.crt' > client.crt"
+    sh "sshpass -p 1329566 ssh -o StrictHostKeyChecking=no ${minikubeServer} 'cat /home/Oumayma/.minikube/profiles/minikube/client.key' > client.key"
+    sh "sshpass -p 1329566 ssh -o StrictHostKeyChecking=no ${minikubeServer} 'cat $KUBECONFIG' > ~/.kube/config"
+}
+
 def deploy() {
     echo "Deploying the application using Kubernetes..."
-    withCredentials([file(credentialsId: 'Kubernetes-Credentials', variable: 'KUBECONFIG_CREDENTIAL')]) {
-        withEnv(['KUBECONFIG=$KUBECONFIG_CREDENTIAL']) {
+            sh "kubectl config use-context minikube"
             sh "kubectl apply -f deployment.yaml"
             sh "kubectl get nodes"
             sh "kubectl get deployments"
             sh "kubectl get pods"
             sh "kubectl get services"
-        }
-    }
 }
 
 return this
