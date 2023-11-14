@@ -27,7 +27,6 @@ def buildImage() {
 
 def deploy() {
     echo "Deploying the application using Kubernetes..."
-    sh "kubectl config use-context minikube"
     sh "kubectl apply -f deployment.yaml"
     sh "kubectl get nodes"
     sh "kubectl get deployments"
