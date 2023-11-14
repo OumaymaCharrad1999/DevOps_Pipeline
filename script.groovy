@@ -27,14 +27,12 @@ def buildImage() {
 
 def deploy() {
     echo "Deploying the application using Kubernetes..."
-    kubeconfig(credentialsId: 'Kubernetes-Credentials', serverUrl: '192.168.49.2') {
-        sh "kubectl config use-context minikube"
-        sh "kubectl apply -f deployment.yaml"
-        sh "kubectl get nodes"
-        sh "kubectl get deployments"
-        sh "kubectl get pods"
-        sh "kubectl get services"
-    }
+    sh "kubectl config use-context minikube"
+    sh "kubectl apply -f deployment.yaml"
+    sh "kubectl get nodes"
+    sh "kubectl get deployments"
+    sh "kubectl get pods"
+    sh "kubectl get services"
 }
 
 return this
