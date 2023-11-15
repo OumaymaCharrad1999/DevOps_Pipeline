@@ -27,19 +27,21 @@ def buildImage() {
 
 def deploy() {
     echo "Deploying the application using Kubernetes..."
-    sh "kubectl delete ns mysql"
-    sh "kubectl delete ns pet-store"
-    sh "kubectl create ns pet-store"
-    sh "kubectl apply -f deployment_pet_store.yaml"
-    sh "kubectl apply -f service_pet_store.yaml"
-    sh "kubectl create ns mysql"
-    sh "kubectl apply -f deployment_mysql.yaml"
-    sh "kubectl apply -f service_mysql.yaml"
-    sh "kubectl apply -f pvc.yaml"
-    sh "kubectl get nodes"
-    sh "kubectl get deployments"
-    sh "kubectl get pods"
-    sh "kubectl get services"
+    kubeconfig(credentialsId: "Kubernetes-Credentials", serverUrl: "192.168.49.2") {
+        sh "kubectl delete ns mysql"
+        sh "kubectl delete ns pet-store"
+        sh "kubectl create ns pet-store"
+        sh "kubectl apply -f deployment_pet_store.yaml"
+        sh "kubectl apply -f service_pet_store.yaml"
+        sh "kubectl create ns mysql"
+        sh "kubectl apply -f deployment_mysql.yaml"
+        sh "kubectl apply -f service_mysql.yaml"
+        sh "kubectl apply -f pvc.yaml"
+        sh "kubectl get nodes"
+        sh "kubectl get deployments"
+        sh "kubectl get pods"
+        sh "kubectl get services"
+    }
 }
 
 return this
