@@ -4,6 +4,7 @@ def gv
 
 pipeline {
     agent any
+
     environment {
         IMAGE_VERSION="latest"
     }
@@ -41,6 +42,22 @@ pipeline {
             steps {
                 script {
                     gv.test()
+                }
+            }
+        }
+
+        stage("Dependency-Check") {
+            steps {
+                script {
+                    gv.dependencyCheck()
+                }
+            }
+        }
+
+        stage("Checkmarx") {
+            steps {
+                script {
+                    gv.checkmarx()
                 }
             }
         }

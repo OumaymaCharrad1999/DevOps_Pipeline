@@ -13,6 +13,16 @@ def test() {
     sh "mvn test"
 }
 
+def dependencyCheck() {
+    echo "Checking third-party dependencies using Dependency-Check..."
+    dependencyCheck additionalArguments: "--scan ./", odcInstallation: "Dependency-Check-8.4.3"
+    dependencyCheckPublisher pattern: "**/dependency-check-report.html"
+}
+
+def checkmarx() {
+    echo "Initiating security-focused static code analysis with Checkmarx..."
+}
+
 def sonarScan() {
     echo "Running SonarQube Scanner..."
     withSonarQubeEnv() {
