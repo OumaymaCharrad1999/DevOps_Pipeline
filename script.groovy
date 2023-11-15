@@ -17,7 +17,7 @@ def sonarScan() {
 
 def buildImage() {
     echo "Building the Docker Image..."
-    withCredentials([usernamePassword(credentialsId: "Docker_Hub_Credentials", passwordVariable: "PASS", usernameVariable: "USER")]) {
+    withCredentials([usernamePassword(credentialsId: "Docker-Hub-Credentials", passwordVariable: "PASS", usernameVariable: "USER")]) {
         sh "docker build -t oumaymacharrad/pet-store-app:${IMAGE_VERSION} ."
         echo "Pushing the Docker Image to Docker Hub..."
         sh "echo $PASS | docker login -u $USER --password-stdin"
