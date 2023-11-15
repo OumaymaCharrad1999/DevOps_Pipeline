@@ -15,8 +15,8 @@ def test() {
 
 def dependencyCheck() {
     echo "Checking third-party dependencies using Dependency-Check..."
-    dependencyCheck additionalArguments: "--scan ./", odcInstallation: "Dependency-Check-8.4.3"
-    dependencyCheckPublisher pattern: "**/dependency-check-report.html"
+    dependencyCheck additionalArguments: "--scan ./ --format XML", odcInstallation: "Dependency-Check-8.4.3"
+    dependencyCheckPublisher pattern: "**/dependency-check-report.xml"
 }
 
 def checkmarx() {
