@@ -1,6 +1,11 @@
+def compile() {
+    echo "Compiling..."
+    sh "mvn clean compile -DskipTests"
+}
+
 def buildJar() {
     echo "Building the JAR file..."
-    sh "mvn clean package -DskipTests"
+    sh "mvn package -DskipTests"
 }
 
 def test() {
@@ -11,7 +16,7 @@ def test() {
 def sonarScan() {
     echo "Running SonarQube Scanner..."
     withSonarQubeEnv() {
-        sh "mvn clean verify sonar:sonar -Dsonar.projectKey=pet_store_pipeline -Dsonar.projectName='pet_store_pipeline'"
+        sh "mvn verify sonar:sonar -Dsonar.projectKey=pet_store_pipeline -Dsonar.projectName='pet_store_pipeline'"
     }
 }
 

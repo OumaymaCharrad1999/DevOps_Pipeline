@@ -7,15 +7,20 @@ pipeline {
     environment {
         IMAGE_VERSION="latest"
     }
-    tools {
-        maven "Maven-3.9.5"
-    }
 
     stages {
         stage("Initialize") {
             steps {
                 script {
                     gv = load "script.groovy"
+                }
+            }
+        }
+
+        stage("Compile") {
+            steps {
+                script {
+                    gv.compile()
                 }
             }
         }
@@ -52,7 +57,7 @@ pipeline {
             }
         }
 
-        stage("Deploying using Kubernetes") {
+        stage("Deploy to Minikube Cluster") {
             steps {
                 script {
                     gv.deploy()
