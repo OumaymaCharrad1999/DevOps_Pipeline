@@ -38,7 +38,6 @@ pipeline {
             }
         }
 
-
         stage("Test") {
             parallel {
 
@@ -81,6 +80,14 @@ pipeline {
             steps {
                 script {
                     gv.buildImage()
+                }
+            }
+        }
+
+        stage ("Trivy Scan") {
+            steps {
+                script {
+                    gv.trivy()
                 }
             }
         }

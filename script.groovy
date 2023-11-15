@@ -40,6 +40,11 @@ def buildImage() {
     }
 }
 
+def trivy(){
+    echo "Running Trivy Security Scan..."
+    sh "trivy image oumaymacharrad/pet-store-app:${IMAGE_VERSION}"
+}
+
 def deploy() {
     echo "Deploying the application using Kubernetes..."
     kubeconfig(credentialsId: "Kubernetes-Credentials", serverUrl: "192.168.49.2") {
