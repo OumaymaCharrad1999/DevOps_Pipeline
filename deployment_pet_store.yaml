@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pet-store-app-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pet-store-app
+  template:
+    metadata:
+      labels:
+        app: pet-store-app
+    spec:
+      containers:
+        - name: pet-store-app-container
+          image: oumaymacharrad/pet-store-app:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: DATABASE_HOST
+              value: "mysqldb-service"
+            - name: DATABASE_USER
+              value: "oumayma"
+            - name: DATABASE_PASSWORD
+              value: "oumayma"
+            - name: DATABASE_ROOT_PASSWORD
+              value: "oumayma"
+            - name: DATABASE_NAME
+              value: "pet_store"
+            - name: DATABASE_PORT
+              value: "3306"
+          ports:
+            - containerPort: 8080

@@ -20,7 +20,7 @@ pipeline {
             }
         }
 
-        /*stage("Build JAR") {
+        stage("Build JAR") {
             steps {
                 script {
                     gv.buildJar()
@@ -50,7 +50,7 @@ pipeline {
                     gv.buildImage()
                 }
             }
-        }*/
+        }
 
         stage("Deploying using Kubernetes") {
             steps {

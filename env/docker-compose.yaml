@@ -5,8 +5,8 @@ services:
     build:
       context: ~/Documents/DevOps/DevOps_TP_2_Pipeline/env/
       dockerfile: Dockerfile
-    image: jenkins-kubectl
-    container_name: "jenkins-container-latest"
+    image: jenkins
+    container_name: "jenkins-container"
     ports:
       - "8080:8080"
     volumes:
@@ -39,7 +39,7 @@ services:
 networks:
   default:
     external:
-      name: pet-store-network
+      name: minikube
 
 volumes:
   jenkins_home:
