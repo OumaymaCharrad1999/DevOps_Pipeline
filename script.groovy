@@ -40,7 +40,7 @@ def buildImage() {
     }
 }
 
-def trivy(){
+def trivyScan(){
     echo "Running Trivy Security Scan..."
     sh "trivy image oumaymacharrad/pet-store-app:${IMAGE_VERSION}"
 }

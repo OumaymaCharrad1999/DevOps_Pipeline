@@ -87,7 +87,7 @@ pipeline {
         stage ("Trivy Scan") {
             steps {
                 script {
-                    gv.trivy()
+                    gv.trivyScan()
                 }
             }
         }
