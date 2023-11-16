@@ -42,7 +42,7 @@ def buildImage() {
 
 def trivyScan(){
     echo "Running Trivy Security Scan..."
-    sh "trivy image oumaymacharrad/pet-store-app:${IMAGE_VERSION}"
+    sh "trivy image oumaymacharrad/pet-store-app:${IMAGE_VERSION} --scanners vuln"
 }
 
 def deploy() {
