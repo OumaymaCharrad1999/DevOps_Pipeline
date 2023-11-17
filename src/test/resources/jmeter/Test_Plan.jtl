@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="47" it="0" lt="43" ct="18" ts="1700247238567" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-1" dt="text" by="1140" sby="188" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700247238619" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-1" dt="text" by="294" sby="186" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/5</java.net.URL>
+</httpSample>
+<httpSample t="8" it="0" lt="8" ct="0" ts="1700247238625" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-1" dt="text" by="295" sby="254" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700247238634" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-1" dt="text" by="2583" sby="186" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700247238641" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-1" dt="text" by="357" sby="184" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/1</java.net.URL>
+</httpSample>
+<httpSample t="8" it="0" lt="8" ct="0" ts="1700247238645" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-1" dt="text" by="358" sby="275" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/create/2</java.net.URL>
+</httpSample>
+<httpSample t="11" it="0" lt="11" ct="1" ts="1700247239478" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-2" dt="text" by="1921" sby="188" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="3" ct="0" ts="1700247239490" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-2" dt="text" by="294" sby="186" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/5</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700247239494" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-2" dt="text" by="295" sby="254" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700247239500" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-2" dt="text" by="4816" sby="186" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700247239507" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-2" dt="text" by="355" sby="184" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/1</java.net.URL>
+</httpSample>
+<httpSample t="7" it="0" lt="7" ct="0" ts="1700247239511" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-2" dt="text" by="356" sby="275" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/create/2</java.net.URL>
+</httpSample>
+<httpSample t="8" it="0" lt="8" ct="1" ts="1700247240478" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-3" dt="text" by="1174" sby="188" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="4" ct="0" ts="1700247240488" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-3" dt="text" by="294" sby="186" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/5</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="5" ct="0" ts="1700247240493" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-3" dt="text" by="295" sby="254" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700247240499" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-3" dt="text" by="2680" sby="186" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700247240505" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-3" dt="text" by="357" sby="184" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/1</java.net.URL>
+</httpSample>
+<httpSample t="9" it="0" lt="9" ct="0" ts="1700247240510" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-3" dt="text" by="358" sby="275" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/create/2</java.net.URL>
+</httpSample>
+<httpSample t="7" it="0" lt="7" ct="0" ts="1700247241476" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-4" dt="text" by="1955" sby="188" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700247241483" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-4" dt="text" by="294" sby="186" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/5</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700247241489" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-4" dt="text" by="295" sby="254" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="7" it="0" lt="7" ct="0" ts="1700247241495" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-4" dt="text" by="4911" sby="186" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="4" ct="0" ts="1700247241502" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-4" dt="text" by="355" sby="184" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/1</java.net.URL>
+</httpSample>
+<httpSample t="8" it="0" lt="8" ct="0" ts="1700247241507" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-4" dt="text" by="356" sby="275" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/create/2</java.net.URL>
+</httpSample>
+<httpSample t="18" it="0" lt="18" ct="2" ts="1700247242477" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-5" dt="text" by="1989" sby="188" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="11" it="0" lt="11" ct="0" ts="1700247242497" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-5" dt="text" by="294" sby="186" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/5</java.net.URL>
+</httpSample>
+<httpSample t="12" it="0" lt="12" ct="0" ts="1700247242510" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-5" dt="text" by="295" sby="254" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="10" it="0" lt="10" ct="0" ts="1700247242523" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-5" dt="text" by="5006" sby="186" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700247242534" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-5" dt="text" by="355" sby="184" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/1</java.net.URL>
+</httpSample>
+<httpSample t="9" it="0" lt="9" ct="0" ts="1700247242540" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-5" dt="text" by="356" sby="275" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/create/2</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="1" ts="1700247243474" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-6" dt="text" by="2023" sby="188" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700247243481" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-6" dt="text" by="294" sby="186" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/5</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700247243486" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-6" dt="text" by="295" sby="254" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700247243493" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-6" dt="text" by="5101" sby="186" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="3" ct="0" ts="1700247243498" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-6" dt="text" by="355" sby="184" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/1</java.net.URL>
+</httpSample>
+<httpSample t="8" it="0" lt="8" ct="0" ts="1700247243502" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-6" dt="text" by="356" sby="275" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/create/2</java.net.URL>
+</httpSample>
+<httpSample t="8" it="0" lt="8" ct="2" ts="1700247244476" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-7" dt="text" by="2057" sby="188" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700247244485" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-7" dt="text" by="294" sby="186" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/5</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700247244490" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-7" dt="text" by="295" sby="254" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700247244497" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-7" dt="text" by="5196" sby="186" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700247244503" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-7" dt="text" by="355" sby="184" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/1</java.net.URL>
+</httpSample>
+<httpSample t="9" it="0" lt="8" ct="0" ts="1700247244508" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-7" dt="text" by="356" sby="275" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/create/2</java.net.URL>
+</httpSample>
+<httpSample t="8" it="0" lt="8" ct="1" ts="1700247245475" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-8" dt="text" by="2091" sby="188" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700247245483" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-8" dt="text" by="294" sby="186" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/5</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700247245488" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-8" dt="text" by="295" sby="254" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="7" it="0" lt="7" ct="0" ts="1700247245494" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-8" dt="text" by="5291" sby="186" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700247245501" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-8" dt="text" by="355" sby="184" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/1</java.net.URL>
+</httpSample>
+<httpSample t="8" it="0" lt="8" ct="0" ts="1700247245505" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-8" dt="text" by="356" sby="275" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/create/2</java.net.URL>
+</httpSample>
+<httpSample t="9" it="0" lt="9" ct="2" ts="1700247246476" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-9" dt="text" by="2125" sby="188" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700247246486" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-9" dt="text" by="294" sby="186" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/5</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700247246490" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-9" dt="text" by="295" sby="254" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700247246497" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-9" dt="text" by="5386" sby="186" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700247246503" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-9" dt="text" by="355" sby="184" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/1</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700247246508" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-9" dt="text" by="356" sby="275" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/create/2</java.net.URL>
+</httpSample>
+<httpSample t="8" it="0" lt="8" ct="1" ts="1700247247473" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-10" dt="text" by="2159" sby="188" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700247247482" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-10" dt="text" by="294" sby="186" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/5</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700247247488" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-10" dt="text" by="295" sby="254" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700247247494" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-10" dt="text" by="5481" sby="186" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="3" ct="0" ts="1700247247501" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-10" dt="text" by="355" sby="184" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/1</java.net.URL>
+</httpSample>
+<httpSample t="8" it="0" lt="8" ct="0" ts="1700247247505" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-10" dt="text" by="356" sby="275" ng="1" na="1">
+  <java.net.URL>http://192.168.49.2:30570/pet/create/2</java.net.URL>
+</httpSample>
+
+</testResults>

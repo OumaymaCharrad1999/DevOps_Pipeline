@@ -43,8 +43,8 @@ def trivyScan(){
 
 def jmeterTests(){
     echo "Running Performance Tests..."
-    sh "jmeter -n -t src/main/resources/Test_Plan.jmx -l src/main/resources/Test_Plan_Results.jtl"
-    perfReport filterRegex: "", showTrendGraphs: true, sourceDataFiles: "src/main/resources/Test_Plan_Results.jtl"
+    sh "jmeter -n -t src/test/resources/jmeter/Test_Plan.jmx -l src/test/resources/jmeter/Test_Plan.jtl"
+    perfReport filterRegex: "", showTrendGraphs: true, sourceDataFiles: "src/test/resources/jmeter/Test_Plan.jtl"
 }
 
 def deploy() {
