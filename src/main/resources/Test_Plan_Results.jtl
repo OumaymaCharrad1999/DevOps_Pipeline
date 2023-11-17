@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="28" it="0" lt="25" ct="16" ts="1700234388592" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-1" dt="text" by="1144" sby="184" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700234388625" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-1" dt="text" by="292" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/6</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700234388629" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-1" dt="text" by="295" sby="250" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700234388635" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-1" dt="text" by="2483" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700234388640" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-1" dt="text" by="353" sby="180" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/7</java.net.URL>
+</httpSample>
+<httpSample t="7" it="0" lt="7" ct="0" ts="1700234388643" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-1" dt="text" by="346" sby="263" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/create/6</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700234389516" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-2" dt="text" by="1178" sby="184" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="2" ct="0" ts="1700234389520" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-2" dt="text" by="292" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/6</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700234389523" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-2" dt="text" by="295" sby="250" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700234389528" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-2" dt="text" by="2568" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700234389533" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-2" dt="text" by="353" sby="180" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/7</java.net.URL>
+</httpSample>
+<httpSample t="7" it="0" lt="7" ct="0" ts="1700234389536" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-2" dt="text" by="346" sby="263" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/create/6</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700234390515" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-3" dt="text" by="1212" sby="184" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="4" ct="0" ts="1700234390519" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-3" dt="text" by="292" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/6</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700234390524" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-3" dt="text" by="295" sby="250" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700234390529" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-3" dt="text" by="2653" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700234390534" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-3" dt="text" by="353" sby="180" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/7</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700234390538" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-3" dt="text" by="346" sby="263" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/create/6</java.net.URL>
+</httpSample>
+<httpSample t="7" it="0" lt="6" ct="1" ts="1700234391514" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-4" dt="text" by="1246" sby="184" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700234391521" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-4" dt="text" by="292" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/6</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="5" ct="0" ts="1700234391525" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-4" dt="text" by="295" sby="250" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="4" ct="0" ts="1700234391531" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-4" dt="text" by="2738" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700234391536" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-4" dt="text" by="353" sby="180" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/7</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="5" ct="0" ts="1700234391540" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-4" dt="text" by="346" sby="263" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/create/6</java.net.URL>
+</httpSample>
+<httpSample t="10" it="0" lt="10" ct="1" ts="1700234392514" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-5" dt="text" by="1280" sby="184" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700234392525" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-5" dt="text" by="292" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/6</java.net.URL>
+</httpSample>
+<httpSample t="7" it="0" lt="7" ct="0" ts="1700234392528" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-5" dt="text" by="295" sby="250" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700234392535" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-5" dt="text" by="2823" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700234392540" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-5" dt="text" by="353" sby="180" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/7</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700234392543" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-5" dt="text" by="346" sby="263" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/create/6</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700234393514" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-6" dt="text" by="1314" sby="184" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700234393519" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-6" dt="text" by="292" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/6</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700234393522" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-6" dt="text" by="295" sby="250" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700234393527" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-6" dt="text" by="2908" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="2" it="0" lt="2" ct="0" ts="1700234393533" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-6" dt="text" by="353" sby="180" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/7</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700234393536" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-6" dt="text" by="346" sby="263" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/create/6</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700234394511" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-7" dt="text" by="1348" sby="184" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700234394515" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-7" dt="text" by="292" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/6</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="5" ct="0" ts="1700234394519" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-7" dt="text" by="295" sby="250" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="3" ct="0" ts="1700234394525" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-7" dt="text" by="2993" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700234394529" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-7" dt="text" by="353" sby="180" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/7</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700234394533" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-7" dt="text" by="346" sby="263" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/create/6</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700234395511" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-8" dt="text" by="1382" sby="184" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700234395515" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-8" dt="text" by="292" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/6</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700234395519" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-8" dt="text" by="295" sby="250" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700234395526" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-8" dt="text" by="3078" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700234395530" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-8" dt="text" by="353" sby="180" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/7</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700234395533" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-8" dt="text" by="346" sby="263" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/create/6</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700234396511" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-9" dt="text" by="1416" sby="184" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700234396517" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-9" dt="text" by="292" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/6</java.net.URL>
+</httpSample>
+<httpSample t="7" it="0" lt="7" ct="0" ts="1700234396522" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-9" dt="text" by="295" sby="250" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700234396529" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-9" dt="text" by="3163" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700234396535" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-9" dt="text" by="353" sby="180" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/7</java.net.URL>
+</httpSample>
+<httpSample t="7" it="0" lt="7" ct="0" ts="1700234396538" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-9" dt="text" by="346" sby="263" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/create/6</java.net.URL>
+</httpSample>
+<httpSample t="11" it="0" lt="10" ct="1" ts="1700234397513" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-10" dt="text" by="1450" sby="184" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700234397524" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-10" dt="text" by="292" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/6</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700234397528" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-10" dt="text" by="295" sby="250" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700234397534" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-10" dt="text" by="3248" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="2" ct="0" ts="1700234397540" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-10" dt="text" by="353" sby="180" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/7</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700234397543" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-10" dt="text" by="346" sby="263" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/create/6</java.net.URL>
+</httpSample>
+
+<httpSample t="29" it="0" lt="26" ct="15" ts="1700235215298" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-1" dt="text" by="1484" sby="184" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700235215334" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-1" dt="text" by="292" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/6</java.net.URL>
+</httpSample>
+<httpSample t="7" it="0" lt="7" ct="0" ts="1700235215338" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-1" dt="text" by="295" sby="250" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700235215346" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-1" dt="text" by="3333" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700235215351" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-1" dt="text" by="353" sby="180" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/7</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700235215355" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-1" dt="text" by="346" sby="263" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/create/6</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="1" ts="1700235216231" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-2" dt="text" by="1518" sby="184" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700235216237" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-2" dt="text" by="292" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/6</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700235216242" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-2" dt="text" by="295" sby="250" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700235216249" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-2" dt="text" by="3418" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700235216255" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-2" dt="text" by="353" sby="180" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/7</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700235216262" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-2" dt="text" by="346" sby="263" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/create/6</java.net.URL>
+</httpSample>
+<httpSample t="10" it="0" lt="10" ct="1" ts="1700235217231" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-3" dt="text" by="1552" sby="184" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700235217241" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-3" dt="text" by="292" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/6</java.net.URL>
+</httpSample>
+<httpSample t="7" it="0" lt="7" ct="0" ts="1700235217246" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-3" dt="text" by="295" sby="250" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700235217254" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-3" dt="text" by="3503" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700235217258" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-3" dt="text" by="353" sby="180" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/7</java.net.URL>
+</httpSample>
+<httpSample t="7" it="0" lt="7" ct="0" ts="1700235217262" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-3" dt="text" by="346" sby="263" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/create/6</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="1" ts="1700235218229" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-4" dt="text" by="1586" sby="184" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700235218236" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-4" dt="text" by="292" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/6</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700235218240" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-4" dt="text" by="295" sby="250" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="4" ct="0" ts="1700235218246" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-4" dt="text" by="3588" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700235218251" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-4" dt="text" by="353" sby="180" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/7</java.net.URL>
+</httpSample>
+<httpSample t="8" it="0" lt="7" ct="0" ts="1700235218255" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-4" dt="text" by="346" sby="263" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/create/6</java.net.URL>
+</httpSample>
+<httpSample t="11" it="0" lt="11" ct="1" ts="1700235219230" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-5" dt="text" by="1620" sby="184" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="11" it="0" lt="10" ct="0" ts="1700235219243" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-5" dt="text" by="292" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/6</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700235219256" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-5" dt="text" by="295" sby="250" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700235219262" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-5" dt="text" by="3673" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700235219267" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-5" dt="text" by="353" sby="180" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/7</java.net.URL>
+</httpSample>
+<httpSample t="7" it="0" lt="7" ct="0" ts="1700235219271" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-5" dt="text" by="346" sby="263" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/create/6</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700235220228" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-6" dt="text" by="1654" sby="184" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="2" it="0" lt="2" ct="0" ts="1700235220232" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-6" dt="text" by="292" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/6</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700235220234" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-6" dt="text" by="295" sby="250" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700235220240" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-6" dt="text" by="3758" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700235220244" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-6" dt="text" by="353" sby="180" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/7</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700235220247" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-6" dt="text" by="346" sby="263" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/create/6</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700235221227" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-7" dt="text" by="1688" sby="184" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="2" it="0" lt="2" ct="0" ts="1700235221231" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-7" dt="text" by="292" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/6</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700235221234" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-7" dt="text" by="295" sby="250" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700235221239" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-7" dt="text" by="3843" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700235221243" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-7" dt="text" by="353" sby="180" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/7</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700235221247" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-7" dt="text" by="346" sby="263" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/create/6</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="1" ts="1700235222229" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-8" dt="text" by="1722" sby="184" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="4" ct="0" ts="1700235222235" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-8" dt="text" by="292" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/6</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700235222239" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-8" dt="text" by="295" sby="250" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700235222245" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-8" dt="text" by="3928" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700235222250" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-8" dt="text" by="353" sby="180" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/7</java.net.URL>
+</httpSample>
+<httpSample t="7" it="0" lt="7" ct="0" ts="1700235222254" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-8" dt="text" by="346" sby="263" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/create/6</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="1" ts="1700235223230" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-9" dt="text" by="1756" sby="184" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="4" it="0" lt="3" ct="0" ts="1700235223236" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-9" dt="text" by="292" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/6</java.net.URL>
+</httpSample>
+<httpSample t="7" it="0" lt="7" ct="0" ts="1700235223240" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-9" dt="text" by="295" sby="250" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700235223248" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-9" dt="text" by="4013" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700235223253" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-9" dt="text" by="353" sby="180" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/7</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700235223257" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-9" dt="text" by="346" sby="263" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/create/6</java.net.URL>
+</httpSample>
+<httpSample t="11" it="0" lt="10" ct="1" ts="1700235224229" s="true" lb="Get All Owners" rc="200" rm="" tn="Test_Plan 1-10" dt="text" by="1790" sby="184" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/all</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700235224241" s="true" lb="Get Owner by ID" rc="200" rm="" tn="Test_Plan 1-10" dt="text" by="292" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/6</java.net.URL>
+</httpSample>
+<httpSample t="6" it="0" lt="6" ct="0" ts="1700235224248" s="true" lb="Create Owner" rc="200" rm="" tn="Test_Plan 1-10" dt="text" by="295" sby="250" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/owner/create</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700235224255" s="true" lb="Get All Pets" rc="200" rm="" tn="Test_Plan 1-10" dt="text" by="4098" sby="182" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/all</java.net.URL>
+</httpSample>
+<httpSample t="3" it="0" lt="3" ct="0" ts="1700235224260" s="true" lb="Get Pet by ID" rc="200" rm="" tn="Test_Plan 1-10" dt="text" by="353" sby="180" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/7</java.net.URL>
+</httpSample>
+<httpSample t="5" it="0" lt="5" ct="0" ts="1700235224264" s="true" lb="Create Pet" rc="200" rm="" tn="Test_Plan 1-10" dt="text" by="346" sby="263" ng="1" na="1">
+  <java.net.URL>http://localhost:3001/pet/create/6</java.net.URL>
+</httpSample>
+
+</testResults>

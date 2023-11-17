@@ -57,14 +57,6 @@ pipeline {
                     }
                 }
 
-                stage("Checkmarx") {
-                    steps {
-                        script {
-                            gv.checkmarx()
-                        }
-                    }
-                }
-
                 stage("SonarQube Analysis") {
                     steps {
                         script {
@@ -88,6 +80,14 @@ pipeline {
             steps {
                 script {
                     gv.trivyScan()
+                }
+            }
+        }
+
+        stage ("JMeter Tests") {
+            steps {
+                script {
+                    gv.jmeterTests()
                 }
             }
         }

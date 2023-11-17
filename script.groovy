@@ -19,10 +19,6 @@ def dependencyCheck() {
     dependencyCheckPublisher pattern: "**/dependency-check-report.xml"
 }
 
-def checkmarx() {
-    echo "Initiating security-focused static code analysis with Checkmarx..."
-}
-
 def sonarScan() {
     echo "Running SonarQube Scanner..."
     withSonarQubeEnv() {
@@ -43,6 +39,12 @@ def buildImage() {
 def trivyScan(){
     echo "Running Trivy Security Scan..."
     sh "trivy image oumaymacharrad/pet-store-app:${IMAGE_VERSION} --scanners vuln"
+}
+
+def jmeterTests(){
+    echo "Running Performance Tests..."
+    sh "jmeter -n -t src/main/resources/Test_Plan.jmx -l src/main/resources/Test_Plan_Results.jtl"
+    perfReport filterRegex: "", showTrendGraphs: true, sourceDataFiles: "src/main/resources/Test_Plan_Results.jtl"
 }
 
 def deploy() {

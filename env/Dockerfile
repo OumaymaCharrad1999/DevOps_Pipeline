@@ -21,6 +21,12 @@ RUN wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | apt-ke
 RUN echo "deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main" > /etc/apt/sources.list.d/trivy.list
 RUN apt-get update && apt-get install -y trivy
 
+# Install JMeter
+RUN mkdir -p /opt/jmeter \
+    && curl -fsSL https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.4.1.tgz | tar -xz -C /opt/jmeter --strip-components=1 \
+    && chown -R jenkins:jenkins /opt/jmeter
+ENV PATH="/opt/jmeter/bin:${PATH}"
+
 USER jenkins
 
 # Install Jenkins plugins
