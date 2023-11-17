@@ -53,7 +53,7 @@
           </elementProp>
           <stringProp name="HTTPSampler.domain">192.168.49.2</stringProp>
           <stringProp name="HTTPSampler.port">30570</stringProp>
-          <stringProp name="HTTPSampler.path">/owner/10</stringProp>
+          <stringProp name="HTTPSampler.path">/owner/5</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
