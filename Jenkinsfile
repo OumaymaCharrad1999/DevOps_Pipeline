@@ -22,7 +22,7 @@ pipeline {
             }
         }
 
-        /*stage("Compile") {
+        stage("Compile") {
             steps {
                 script {
                     gv.compile()
@@ -82,7 +82,7 @@ pipeline {
                     gv.trivyScan()
                 }
             }
-        }*/
+        }
 
         stage ("JMeter Tests") {
             steps {
@@ -92,13 +92,13 @@ pipeline {
             }
         }
 
-        /*stage("Deploy to Minikube Cluster") {
+        stage("Deploy to Minikube Cluster") {
             steps {
                 script {
                     gv.deploy()
                 }
             }
-        }*/
+        }
     }
 
 }
