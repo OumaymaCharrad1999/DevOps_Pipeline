@@ -66,7 +66,7 @@ def deploy() {
 
 def sendEmail() {
     echo "Sending Email..."
-    emailextrecipients([buildUser()])
+    emailext recipientProviders: [buildUser()], to: "charradoumayma1@gmail.com"
 }
 
 return this
