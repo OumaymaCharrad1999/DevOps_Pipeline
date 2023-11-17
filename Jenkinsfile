@@ -100,19 +100,13 @@ pipeline {
             }
         }
 
-        stage("Send Email") {
-            steps {
-                script {
-                    gv.sendEmail()
-                }
-            }
-        }
     }
 
-    /*post {
+    post {
         always {
             junit "target/surefire-reports/*.xml"
+            emailext body: "${DEFAULT_CONTENT}", recipientProviders: [[$class: "DevelopersRecipientProvider"], [$class: "RequesterRecipientProvider"]], subject: "${DEFAULT_SUBJECT}"
         }
-    }*/
+    }
 
 }
