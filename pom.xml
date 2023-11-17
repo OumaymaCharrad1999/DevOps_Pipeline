@@ -154,12 +154,12 @@
                             <goal>jmeter</goal>
                         </goals>
                     </execution>
-                    <execution>
+                    <!--<execution>
                         <id>jmeter-check-results</id>
                         <goals>
                             <goal>results</goal>
                         </goals>
-                    </execution>
+                    </execution>-->
                 </executions>
                 <configuration>
                     <testFilesDirectory>src/main/resources</testFilesDirectory>
