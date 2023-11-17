@@ -6,7 +6,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_VERSION="latest"
+        IMAGE_VERSION = "latest"
     }
 
     tools {
@@ -76,7 +76,7 @@ pipeline {
             }
         }
 
-        stage ("Trivy Scan") {
+        stage("Trivy Scan") {
             steps {
                 script {
                     gv.trivyScan()
@@ -84,7 +84,7 @@ pipeline {
             }
         }
 
-        stage ("JMeter Tests") {
+        stage("JMeter Tests") {
             steps {
                 script {
                     gv.jmeterTests()
@@ -106,6 +106,12 @@ pipeline {
                     gv.sendEmail()
                 }
             }
+        }
+    }
+
+    post {
+        always {
+            junit "target/surefire-reports/*.xml"
         }
     }
 
