@@ -105,7 +105,7 @@ pipeline {
     post {
         always {
             junit "target/surefire-reports/*.xml"
-            emailext body: "${DEFAULT_CONTENT}", recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: "${DEFAULT_SUBJECT}"
+            emailext body: "${env.DEFAULT_CONTENT}", recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: "${env.DEFAULT_SUBJECT}"
         }
     }
 
