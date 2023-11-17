@@ -119,7 +119,6 @@
                 <version>0.8.6</version>
                 <configuration>
                     <destFile>target/coverage-reports/jacoco-unit.exec</destFile>
-                    <dataFile>target/coverage-reports/jacoco-unit.exec</dataFile>
                     <output>file</output>
                     <append>true</append>
                     <excludes>
@@ -156,8 +155,8 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <testFilesDirectory>${project.basedir}/src/main/resources</testFilesDirectory>
-                    <resultsDirectory>${project.basedir}/src/main/resources</resultsDirectory>
+                    <testFilesDirectory>src/main/resources</testFilesDirectory>
+                    <resultsDirectory>src/main/resources</resultsDirectory>
                 </configuration>
             </plugin>
         </plugins>
