@@ -99,6 +99,14 @@ pipeline {
                 }
             }
         }
+
+        stage("Send Email") {
+            steps {
+                script {
+                    gv.sendEmail()
+                }
+            }
+        }
     }
 
 }

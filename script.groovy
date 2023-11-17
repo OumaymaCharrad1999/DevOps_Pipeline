@@ -64,4 +64,9 @@ def deploy() {
     }
 }
 
+def sendEmail() {
+    echo "Sending Email..."
+    emailextrecipients([buildUser()])
+}
+
 return this
