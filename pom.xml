@@ -162,8 +162,8 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <testFilesDirectory>src/test/jmeter/resources</testFilesDirectory>
-                    <resultsDirectory>src/test/jmeter/resources</resultsDirectory>
+                    <testFilesDirectory>src/test/resources/jmeter</testFilesDirectory>
+                    <resultsDirectory>src/test/resources/jmeter</resultsDirectory>
                 </configuration>
             </plugin>
         </plugins>

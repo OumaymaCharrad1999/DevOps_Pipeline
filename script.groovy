@@ -16,7 +16,7 @@ def test() {
 def dependencyCheck() {
     echo "Checking third-party dependencies using Dependency-Check..."
     dependencyCheck additionalArguments: "--scan ./ --format XML", odcInstallation: "Dependency-Check-8.4.3"
-    dependencyCheckPublisher pattern: "target/dependency-check-report.xml"
+    dependencyCheckPublisher pattern: "**/dependency-check-report.xml"
 }
 
 def sonarScan() {
