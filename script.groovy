@@ -16,7 +16,7 @@ def test() {
 def dependencyCheck() {
     echo "Checking third-party dependencies using Dependency-Check..."
     dependencyCheck additionalArguments: "--scan ./ --format XML", odcInstallation: "Dependency-Check-8.4.3"
-    dependencyCheckPublisher pattern: "**/dependency-check-report.xml"
+    dependencyCheckPublisher pattern: "target/dependency-check-report.xml"
 }
 
 def sonarScan() {
@@ -44,7 +44,7 @@ def trivyScan(){
 def jmeterTests(){
     echo "Running Performance Tests..."
     sh "jmeter -n -t src/test/resources/jmeter/Test_Plan.jmx -l src/test/resources/jmeter/Test_Plan.jtl"
-    perfReport filterRegex: "", showTrendGraphs: true, sourceDataFiles: "src/test/resources/jmeter/Test_Plan.jtl"
+    perfReport filterRegex: "", showTrendGraphs: true, sourceDataFiles: "src/test/resources/jmeter/Test_Plan.jmx"
 }
 
 def deploy() {

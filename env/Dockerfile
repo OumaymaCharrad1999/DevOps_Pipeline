@@ -12,7 +12,7 @@ RUN echo "deb [arch=$(dpkg --print-architecture) \
 RUN apt-get update && apt-get install -y docker-ce-cli
 RUN groupadd -g 973 docker && usermod -aG docker jenkins
 
-# Install kubectl
+# Install Kubectl
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl; \
     chmod +x ./kubectl; mv ./kubectl /usr/local/bin/kubectl
 
