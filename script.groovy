@@ -45,7 +45,7 @@ def buildImage() {
 
 def trivyScan(){
     echo "Running Trivy Security Scan..."
-    sh "trivy image -o report.html oumaymacharrad/pet-store-app:${IMAGE_VERSION} --scanners vuln"
+    sh "trivy image --format template --template '@/usr/local/share/trivy/templates/html.tpl' -o report.html oumaymacharrad/pet-store-app:${IMAGE_VERSION} --scanners vuln"
 }
 
 def jmeterTests(){
