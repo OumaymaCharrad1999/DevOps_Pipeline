@@ -114,7 +114,8 @@ pipeline {
         always {
             junit "target/surefire-reports/*.xml"
             emailext body: '''$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS: Check console output at $BUILD_URL to view the results.''',
-                    subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', to: 'charradoumayma1@gmail.com'
+                    subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!', to: 'charradoumayma1@gmail.com',
+                    attachmentsPattern: "TrivyReport.html"
         }
     }
 
