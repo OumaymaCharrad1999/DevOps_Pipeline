@@ -54,6 +54,11 @@ def jmeterTests(){
     perfReport filterRegex: "", showTrendGraphs: true, sourceDataFiles: "src/test/resources/jmeter/Test_Plan.jtl; target/surefire-reports/TEST-*.xml"
 }
 
+def loadViewTests() {
+    echo "Running LoadView Stress Test..."
+    dotcomMonitor avgTime: 1, credentialsId: "LoadView-Credentials", errorThreshold: 5, scenarioId: "137"
+}
+
 def deploy() {
     echo "Deploying the application using Kubernetes..."
     kubeconfig(credentialsId: "Kubernetes-Credentials", serverUrl: "192.168.49.2") {
