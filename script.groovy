@@ -28,7 +28,8 @@ def sonarScan() {
 
 def pushToNexus() {
     echo "Pushing the JAR file to Nexus Repository Manager..."
-    nexusArtifactUploader credentialsId: "Nexus-Credentials", groupId: "com.example", nexusUrl: "192.168.1.19:8081", nexusVersion: "nexus3", protocol: "http", 
+    nexusArtifactUploader artifacts: [[artifactId: "devops-pipeline", classifier: "", file: "/target/devops-pipeline-0.0.1-SNAPSHOT.jar", type: "jar"]], 
+        credentialsId: "Nexus-Credentials", groupId: "com.example", nexusUrl: "192.168.1.19:8081", nexusVersion: "nexus3", protocol: "http", 
         repository: "maven-snapshots", version: "0.0.1-SNAPSHOT"
 }
 
