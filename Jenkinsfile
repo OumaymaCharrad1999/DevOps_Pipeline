@@ -100,6 +100,14 @@ pipeline {
             }
         }
 
+        stage("LoadView Stress Test") {
+            steps {
+                script {
+                    gv.loadViewTests()
+                }
+            }
+        }
+        
         stage("Deploy to Minikube Cluster") {
             steps {
                 script {
