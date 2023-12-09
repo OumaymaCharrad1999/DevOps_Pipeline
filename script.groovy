@@ -22,7 +22,7 @@ def dependencyCheck() {
 def sonarScan() {
     echo "Running SonarQube Scanner..."
     withSonarQubeEnv() {
-        sh "mvn verify sonar:sonar -Dsonar.projectKey=pet_store_pipeline -Dsonar.projectName=pet_store_pipeline"
+        sh "mvn verify sonar:sonar -Dsonar.projectKey=pet_store_pipeline_dev -Dsonar.projectName=pet_store_pipeline_develop -Dsonar.token=sqp_e549ee970466f2fbe0ad88420ac5148ed6389465"
     }
 }
 
