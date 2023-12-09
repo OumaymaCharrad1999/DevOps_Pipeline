@@ -93,34 +93,31 @@ pipeline {
         }
 
         stage("Trivy Scan") {
-            when {
-                expression { env.BRANCH_NAME == "production" }
-            }
-            steps {
-                script {
-                    gv.trivyScan()
+            if(env.BRANCH_NAME == "production") {
+                steps {
+                    script {
+                        gv.trivyScan()
+                    }
                 }
-            }
+            } 
         }
 
         stage("JMeter Tests") {
-            when {
-                expression { env.BRANCH_NAME == "production" }
-            }
-            steps {
-                script {
-                    gv.jmeterTests()
+            if(env.BRANCH_NAME == "production") {
+                steps {
+                    script {
+                        gv.jmeterTests()
+                    }
                 }
             }
         }
 
         stage("Deploy to Production Environment") {
-            when {
-                expression { env.BRANCH_NAME == "production" }
-            }
-            steps {
-                script {
-                    gv.deployToProdEnv()
+            if(env.BRANCH_NAME == "production") {
+                steps {
+                    script {
+                        gv.deployToProdEnv()
+                    }
                 }
             }
         }
