@@ -7,6 +7,7 @@ pipeline {
 
     environment {
         IMAGE_VERSION = "latest"
+        BRANCH_NAME = "develop"
     }
 
     tools {
@@ -49,13 +50,13 @@ pipeline {
                     }
                 }
 
-                /*stage("Dependency-Check") {
+                stage("Dependency-Check") {
                     steps {
                         script {
                             gv.dependencyCheck()
                         }
                     }
-                }*/
+                }
 
                 stage("SonarQube Analysis") {
                     steps {
@@ -93,31 +94,34 @@ pipeline {
         }
 
         stage("Trivy Scan") {
-            if(env.BRANCH_NAME == "production") {
-                steps {
-                    script {
-                        gv.trivyScan()
-                    }
+            when {
+                expression { env.BRANCH_NAME == "production" }
+            }
+            steps {
+                script {
+                    gv.trivyScan()
                 }
-            } 
+            }
         }
 
         stage("JMeter Tests") {
-            if(env.BRANCH_NAME == "production") {
-                steps {
-                    script {
-                        gv.jmeterTests()
-                    }
+            when {
+                expression { env.BRANCH_NAME == "production" }
+            }
+            steps {
+                script {
+                    gv.jmeterTests()
                 }
             }
         }
 
         stage("Deploy to Production Environment") {
-            if(env.BRANCH_NAME == "production") {
-                steps {
-                    script {
-                        gv.deployToProdEnv()
-                    }
+            when {
+                expression { env.BRANCH_NAME == "production" }
+            }
+            steps {
+                script {
+                    gv.deployToProdEnv()
                 }
             }
         }
