@@ -7,7 +7,6 @@ pipeline {
 
     environment {
         IMAGE_VERSION = "latest"
-        BRANCH_NAME = "production"
     }
 
     tools {
@@ -95,7 +94,7 @@ pipeline {
 
         stage("Trivy Scan") {
             when {
-                expression { env.BRANCH_NAME == "production" }
+                expression { $BRANCH_NAME == "production" }
             }
             steps {
                 script {
@@ -106,7 +105,7 @@ pipeline {
 
         stage("JMeter Tests") {
             when {
-                expression { env.BRANCH_NAME == "production" }
+                expression { $BRANCH_NAME == "production" }
             }
             steps {
                 script {
@@ -117,7 +116,7 @@ pipeline {
 
         stage("Deploy to Production Environment") {
             when {
-                expression { env.BRANCH_NAME == "production" }
+                expression { $BRANCH_NAME == "production" }
             }
             steps {
                 script {
