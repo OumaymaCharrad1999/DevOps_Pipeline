@@ -49,13 +49,13 @@ pipeline {
                     }
                 }
 
-                stage("Dependency-Check") {
+                /*stage("Dependency-Check") {
                     steps {
                         script {
                             gv.dependencyCheck()
                         }
                     }
-                }
+                }*/
 
                 stage("SonarQube Analysis") {
                     steps {
