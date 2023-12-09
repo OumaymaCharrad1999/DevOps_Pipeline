@@ -93,6 +93,9 @@ pipeline {
         }
 
         stage("Trivy Scan") {
+            when {
+                expression { BRANCH_NAME == "production" }
+            }
             steps {
                 script {
                     gv.trivyScan()
@@ -101,6 +104,9 @@ pipeline {
         }
 
         stage("JMeter Tests") {
+            when {
+                expression { BRANCH_NAME == "production" }
+            }
             steps {
                 script {
                     gv.jmeterTests()
@@ -109,6 +115,9 @@ pipeline {
         }
 
         stage("Deploy to Production Environment") {
+            when {
+                expression { BRANCH_NAME == "production" }
+            }
             steps {
                 script {
                     gv.deployToProdEnv()
