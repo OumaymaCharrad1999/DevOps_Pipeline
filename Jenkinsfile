@@ -7,6 +7,7 @@ pipeline {
 
     environment {
         IMAGE_VERSION = "latest"
+        BRANCH_NAME = "production"
     }
 
     tools {
