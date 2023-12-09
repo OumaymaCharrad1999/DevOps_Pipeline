@@ -94,7 +94,7 @@ pipeline {
 
         stage("Trivy Scan") {
             when {
-                expression { BRANCH_NAME == "production" }
+                expression { env.BRANCH_NAME == "production" }
             }
             steps {
                 script {
@@ -105,7 +105,7 @@ pipeline {
 
         stage("JMeter Tests") {
             when {
-                expression { BRANCH_NAME == "production" }
+                expression { env.BRANCH_NAME == "production" }
             }
             steps {
                 script {
@@ -116,7 +116,7 @@ pipeline {
 
         stage("Deploy to Production Environment") {
             when {
-                expression { BRANCH_NAME == "production" }
+                expression { env.BRANCH_NAME == "production" }
             }
             steps {
                 script {
