@@ -43,6 +43,23 @@ def buildImage() {
     }
 }
 
+def deployToDevEnv() {
+    echo "Deploying the application to Develop Environment using Kubernetes..."
+    kubeconfig(credentialsId: "Kubernetes-Credentials", serverUrl: "192.168.49.2") {
+        sh "kubectl create ns pet-store --dry-run=client"
+        sh "kubectl apply -f deployment-pet-store.yaml"
+        sh "kubectl apply -f service-pet-store.yaml"
+        sh "kubectl create ns mysql --dry-run=client"
+        sh "kubectl apply -f deployment-mysql.yaml"
+        sh "kubectl apply -f service-mysql.yaml"
+        sh "kubectl apply -f pvc.yaml"
+        sh "kubectl get nodes"
+        sh "kubectl get deployments"
+        sh "kubectl get pods"
+        sh "kubectl get services"
+    }
+}
+
 def trivyScan(){
     echo "Running Trivy Security Scan..."
     sh "trivy image --format template --template '@/usr/local/share/trivy/templates/html.tpl' -o TrivyReport.html oumaymacharrad/pet-store-app:${IMAGE_VERSION} --scanners vuln"
@@ -54,8 +71,9 @@ def jmeterTests(){
     perfReport filterRegex: "", showTrendGraphs: true, sourceDataFiles: "src/test/resources/jmeter/Test_Plan.jtl; target/surefire-reports/TEST-*.xml"
 }
 
-def deploy() {
-    echo "Deploying the application using Kubernetes..."
+def deployToProdEnv() {
+    input "Do you approve deployment to production environment ?"
+    echo "Deploying the application to Production Environment using Kubernetes..."
     kubeconfig(credentialsId: "Kubernetes-Credentials", serverUrl: "192.168.49.2") {
         sh "kubectl create ns pet-store --dry-run=client"
         sh "kubectl apply -f deployment-pet-store.yaml"

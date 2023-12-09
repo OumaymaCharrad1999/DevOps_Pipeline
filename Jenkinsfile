@@ -84,6 +84,14 @@ pipeline {
             }
         }
 
+        stage("Deploy to Develop Environment") {
+            steps {
+                script {
+                    gv.deployToDevEnv()
+                }
+            }
+        }
+
         stage("Trivy Scan") {
             steps {
                 script {
@@ -99,11 +107,11 @@ pipeline {
                 }
             }
         }
-        
-        stage("Deploy to Minikube Cluster") {
+
+        stage("Deploy to Production Environment") {
             steps {
                 script {
-                    gv.deploy()
+                    gv.deployToProdEnv()
                 }
             }
         }
