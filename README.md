@@ -26,4 +26,4 @@ Jenkins assure le déploiement de notre application dans un cluster Minikube. En
 ## 13. Surveillance
 La surveillance du cluster Minikube ainsi que de l’intégralité de notre système sera effectuée à l’aide de Prometheurs et Grafana.
 
-![Alt text](https://github.com/OumaymaCharrad1999/DevOps_Pipeline/tree/develop/images/Architecture.png)
+![Alt text](https://github.com/OumaymaCharrad1999/DevOps_Pipeline/blob/develop/images/Architecture.png)
